@@ -3,3 +3,4 @@ ls
 mkdir
 chmod
 sudo su
+nmap

@@ -13,11 +13,22 @@ def get_bash_history():
         text = f.read()
     return text
 
+def get_check(text,f_commands):
+    all_commands = text.splitlines()
+    for user_command in all_commands:
+        for search_command in f_commands:
+            if search_command in user_command:
+                return "False" 
+    return "True"            
+        
 
+forbidden_commands = ["sudo","nmap","shutdown"]
+
+    
 
 
 sock_stream = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-sock_stream.bind(('localhost',3000))
+sock_stream.bind(('localhost',3006))
 sock_stream.listen(1)
 conn, addr = sock_stream.accept()
 print(f"Connection access: {addr}" )
@@ -30,4 +41,8 @@ while True:
     elif inp == "2":
         inp_file = get_bash_history()
         conn.send(inp_file.encode())
+    elif inp == "3":
+        ex = get_bash_history()
+        inp_ex = get_check(ex,forbidden_commands)
+        conn.send(inp_ex.encode())
     print(data.decode('UTF-8'))

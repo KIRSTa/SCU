@@ -1,19 +1,24 @@
 import socket
 
+servers = []
 
-# функция, которая принимает строку из "bash.txt" 
-# разбивает строку на команды (List) 
-# наличие запрещённых команд (sudo) и при обнаружении уведомить (print)
+# sock_user = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+# sock_user.connect(('localhost',3000))
 
-
-sock_user= socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-sock_user.connect(('localhost',3000))
 while True:
     msg=input(">>>")
-
-    sock_user.send(msg.encode())
-    output=sock_user.recv(1024)
-    print(output.decode('UTF-8'))
+    if msg == "conn":
+        host=input("Enter host: ")
+        port=input("Enter port: ")
+        sock_user = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        sock_user.connect((host,int(port)))
+        servers.append(sock_user)
+    elif msg == "send":
+        servers_index = input(f"Enter index(0-{len(servers)}): ")
+        client_msg = input(">>>")
+        servers[int(servers_index)].send(msg.encode())
+        output=servers[int(servers_index)].recv(1024)
+        print(output.decode('UTF-8'))
 
 
 
