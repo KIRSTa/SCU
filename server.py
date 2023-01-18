@@ -28,7 +28,7 @@ forbidden_commands = ["sudo","nmap","shutdown"]
 
 
 sock_stream = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-sock_stream.bind(('localhost',3006))
+sock_stream.bind(('localhost',3007))
 sock_stream.listen(1)
 conn, addr = sock_stream.accept()
 print(f"Connection access: {addr}" )

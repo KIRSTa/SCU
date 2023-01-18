@@ -14,9 +14,9 @@ while True:
         sock_user.connect((host,int(port)))
         servers.append(sock_user)
     elif msg == "send":
-        servers_index = input(f"Enter index(0-{len(servers)}): ")
+        servers_index = input(f"Enter index(0-{len(servers)-1}): ")
         client_msg = input(">>>")
-        servers[int(servers_index)].send(msg.encode())
+        servers[int(servers_index)].send(client_msg.encode())
         output=servers[int(servers_index)].recv(1024)
         print(output.decode('UTF-8'))
 
