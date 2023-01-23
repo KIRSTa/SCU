@@ -29,5 +29,5 @@ class Server:
                 self.client_conn.send(inp_ex.encode())
             print(data.decode('UTF-8'))
         
-server = Server('localhost',3007)
+server = Server('localhost',3009)
 server.run()
