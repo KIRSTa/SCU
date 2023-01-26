@@ -16,6 +16,8 @@ class Server:
         print(f"Connection access: {self.client_addr}" )
         while True:
             data = self.client_conn.recv(1024)
+            if not data:
+                break
             inp = data.decode('UTF-8')
             if inp == "1":
                 hash_file = get_hash_from_file("test.txt")
@@ -29,5 +31,5 @@ class Server:
                 self.client_conn.send(inp_ex.encode())
             print(data.decode('UTF-8'))
         
-server = Server('localhost',3009)
+server = Server('localhost',3007)
 server.run()

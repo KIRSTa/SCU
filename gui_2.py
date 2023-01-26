@@ -1,6 +1,7 @@
-from PyQt5.QtWidgets import (QWidget,QApplication,QLabel,QGridLayout,QPushButton,QLineEdit,QComboBox)
+from PyQt5.QtWidgets import (QWidget,QApplication,QLabel,QGridLayout,QPushButton,QLineEdit,QComboBox,QMessageBox)
 from client import Client
 import sys
+
 
 
 
@@ -12,8 +13,11 @@ class MyGUI(QWidget):
     def conn(self):
         host = self.host_line_edit.text()
         port = self.port_line_edit.text()
-        self.combo_box.addItem(f"{host}:{port}")
-        self.client.server_connect(host,int(port))
+        try:
+            self.client.server_connect(host,int(port))
+            self.combo_box.addItem(f"{host} : {port}")            
+        except:
+            QMessageBox.about(self,"allert",f"{host} : {port} crashed")
     def get_hash(self):
         server_index = self.combo_box.currentIndex()
         hash_file = self.client.send_to("1",server_index) 
@@ -24,6 +28,21 @@ class MyGUI(QWidget):
         self.bash_label.setText(bash_file)
         bash_file = self.client.send_to("3",server_index)
         self.history_label.setText(bash_file)
+    def connect_list(self):
+        msg = ''
+        with open("host_port.txt",'r') as f:
+            hostes_portes = f.readlines()
+        for host_port in hostes_portes:
+            msg += host_port[:-1]
+            [host,port] = host_port.split(":")
+            try:
+                self.client.server_connect(host,int(port))
+                self.combo_box.addItem(f"{host}:{port}")
+                msg += " connected \n"
+            except:
+                msg += " no connect... \n"
+        QMessageBox.about(self,"allert",msg)
+        
 
         
         
@@ -37,6 +56,8 @@ class MyGUI(QWidget):
         self.hash_label = QLabel("HASH")
         self.bash_label = QLabel("BASH")
         self.history_label = QLabel("Allarm")
+        self.host_label = QLabel("Enter host")
+        self.port_label = QLabel("Enter port")
 
         self.button_connect = QPushButton("Connect")
         self.button_connect.clicked.connect(self.conn)
@@ -46,16 +67,23 @@ class MyGUI(QWidget):
 
         self.button_hash = QPushButton("Get Hash")
         self.button_hash.clicked.connect(self.get_hash)
+
         self.button_bash = QPushButton("Get Bash")
         self.button_bash.clicked.connect(self.get_bash)
+
+        self.button_connect_list = QPushButton("Connect list")
+        self.button_connect_list.clicked.connect(self.connect_list)
         
 
-        grid.addWidget(self.host_line_edit,0,0)
-        grid.addWidget(self.port_line_edit,1,0)
+        grid.addWidget(self.host_line_edit,0,1)
+        grid.addWidget(self.port_line_edit,1,1)
         grid.addWidget(self.button_connect,2,0)
         grid.addWidget(self.combo_box,0,2)
-        grid.addWidget(self.button_hash,1,2)
-        grid.addWidget(self.button_bash,2,2)
+        grid.addWidget(self.button_hash,2,2)
+        grid.addWidget(self.button_bash,3,2)
+        grid.addWidget(self.button_connect_list,1,2)
+        grid.addWidget(self.host_label,0,0)
+        grid.addWidget(self.port_label,1,0)
         grid.addWidget(self.hash_label,3,1)
         grid.addWidget(self.bash_label,4,1)
         grid.addWidget(self.history_label,5,1)
