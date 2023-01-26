@@ -3,8 +3,6 @@ from client import Client
 import sys
 
 
-
-
 class MyGUI(QWidget):
     def __init__(self):
         super().__init__()
@@ -45,8 +43,6 @@ class MyGUI(QWidget):
         
 
         
-        
-
     def initUI(self):
         grid = QGridLayout()
         
@@ -88,8 +84,6 @@ class MyGUI(QWidget):
         grid.addWidget(self.bash_label,4,1)
         grid.addWidget(self.history_label,5,1)
 
-
-        
 
         self.setLayout(grid)
 
