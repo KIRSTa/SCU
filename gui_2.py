@@ -51,9 +51,11 @@ class MyGUI(QWidget):
         server_index = self.combo_box.currentIndex()
         usb_devices = self.client.send_to("4",server_index) 
         devices = parse_usb_history(usb_devices)
+        msg = ''
         for device in devices:
-            print("=========================")
-            print(f'Connected:{device.Connected}\nProduct:{device.Product}\nSerial_Number:{device.Serial_Number}\nBus_Port:{device.Bus_Port}')
+            msg += "=========================\n"
+            msg += f'Connected:{device.Connected}\nProduct:{device.Product}\nSerial_Number:{device.Serial_Number}\nBus_Port:{device.Bus_Port}\n'
+        QMessageBox.about(self,"Devices",msg)
 
 
     def get_bash(self):
