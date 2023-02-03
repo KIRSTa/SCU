@@ -1,4 +1,5 @@
 import hashlib
+import subprocess
 
 def get_hash_from_file(path_file):
     h= hashlib.sha256()
@@ -19,6 +20,11 @@ def get_check(text,f_commands):
             if search_command in user_command:
                 return "False" 
     return "True"            
-        
+
+def get_usb_devices():
+    result = subprocess.getoutput('usbrip events history -q >> uh.txt')
+    with open("uh.txt", 'r') as f:
+        data = f.read()
+    return data.encode()
 
 forbidden_commands = ["sudo","nmap","shutdown"]

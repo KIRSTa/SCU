@@ -29,6 +29,10 @@ class Server:
                 ex = get_bash_history()
                 inp_ex = get_check(ex,forbidden_commands)
                 self.client_conn.send(inp_ex.encode())
+            elif inp =="4":
+                inp_ex = get_usb_devices()
+                self.client_conn.send(inp_ex)
+                
             print(data.decode('UTF-8'))
         
 server = Server('localhost',3007)

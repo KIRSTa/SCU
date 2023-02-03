@@ -10,5 +10,5 @@ class Client:
         self.servers.append(self.sock_user)
     def send_to(self,msg,server_index):
         self.servers[server_index].send(msg.encode())
-        output=self.servers[server_index].recv(1024)
+        output=self.servers[server_index].recv(10024)
         return output.decode("UTF-8")
