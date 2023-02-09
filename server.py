@@ -34,7 +34,8 @@ class Server:
                 self.client_conn.send(inp_ex)
             elif inp =="5":
                 example = get_example_program()
-                self.client_conn.send(example)
+                self.client_conn.send(example.encode())
+                print(example)
                 
             print(data.decode('UTF-8'))
         
