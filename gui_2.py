@@ -129,7 +129,7 @@ class MyGUI(QWidget):
         grid.addWidget(self.button_connect_list,1,2)
         grid.addWidget(self.button_hash,2,2)
         grid.addWidget(self.button_bash,3,2)
-        grid.addWidget(self.button_bash,4,2)
+        grid.addWidget(self.button_get_prog,4,2)
         grid.addWidget(self.host_label,0,0)
         grid.addWidget(self.port_label,1,0)
         grid.addWidget(self.hash_label,3,1)
