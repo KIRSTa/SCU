@@ -7,6 +7,11 @@ def get_hash_from_file(path_file):
         text = f.read()
     h.update(text.encode())
     return h.hexdigest()
+def get_example_program():
+    subprocess.getoutput('zgrep " installed " /var/log/dpkg.log* >> ex_prog.txt')
+    return get_hash_from_file('ex_prog.txt')
+
+
 
 def get_bash_history():
     with open("bash.txt",'r') as f:

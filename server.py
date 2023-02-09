@@ -32,6 +32,9 @@ class Server:
             elif inp =="4":
                 inp_ex = get_usb_devices()
                 self.client_conn.send(inp_ex)
+            elif inp =="5":
+                example = get_example_program()
+                self.client_conn.send(example)
                 
             print(data.decode('UTF-8'))
         

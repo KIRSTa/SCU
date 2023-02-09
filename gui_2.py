@@ -29,6 +29,7 @@ def parse_usb_history(usb_devices_text)->List[UsbDevice]:
     return devices
 
 
+
 class MyGUI(QWidget):
     def __init__(self):
         super().__init__()
@@ -56,6 +57,12 @@ class MyGUI(QWidget):
             msg += "=========================\n"
             msg += f'Connected:{device.Connected}\nProduct:{device.Product}\nSerial_Number:{device.Serial_Number}\nBus_Port:{device.Bus_Port}\n'
         QMessageBox.about(self,"Devices",msg)
+    def get_ex_prog(self):
+        server_index = self.combo_box.currentIndex()
+        ex_prog = self.client.send_to("5",server_index)
+        print (ex_prog)
+
+    
 
 
     def get_bash(self):
@@ -111,14 +118,18 @@ class MyGUI(QWidget):
         self.button_get_usb = QPushButton("Get USB devices")
         self.button_get_usb.clicked.connect(self.get_usb_devices)
 
+        self.button_get_prog = QPushButton("Get example programm")
+        self.button_get_prog.clicked.connect(self.get_ex_prog)
+
 
         grid.addWidget(self.host_line_edit,0,1)
         grid.addWidget(self.port_line_edit,1,1)
         grid.addWidget(self.button_connect,2,0)
         grid.addWidget(self.combo_box,0,2)
+        grid.addWidget(self.button_connect_list,1,2)
         grid.addWidget(self.button_hash,2,2)
         grid.addWidget(self.button_bash,3,2)
-        grid.addWidget(self.button_connect_list,1,2)
+        grid.addWidget(self.button_bash,4,2)
         grid.addWidget(self.host_label,0,0)
         grid.addWidget(self.port_label,1,0)
         grid.addWidget(self.hash_label,3,1)
