@@ -62,7 +62,7 @@ class MyGUI(QWidget):
         server_index = self.combo_box.currentIndex()
         ex_prog = self.client.send_to("5",server_index)
         
-        if ex_prog != "":
+        if ex_prog != "096d295956f2dcd973b96219e278930398d8a4f84aae334f3e5f79e8ff50bd18":
             QMessageBox.about(self,"Programm","Изменение программ")
 
     
