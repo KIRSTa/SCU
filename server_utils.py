@@ -13,11 +13,7 @@ def get_example_program():
     with open("ex_prog.txt", 'r') as f:
         data = f.readlines()
         data = ''.join([''.join(s.split(' ')[-2:]) for s in data])
-        print (data)
-    return data.encode()
-
-
-
+    return data
 
 def get_bash_history():
     with open("bash.txt",'r') as f:
