@@ -7,9 +7,15 @@ def get_hash_from_file(path_file):
         text = f.read()
     h.update(text.encode())
     return h.hexdigest()
+
 def get_example_program():
     subprocess.getoutput('zgrep " installed " /var/log/dpkg.log* >> ex_prog.txt')
-    return get_hash_from_file('ex_prog.txt')
+    with open("ex_prog.txt", 'r') as f:
+        data = f.readlines()
+        data = [''.join(s.split(' ')[-2:]) for s in data]
+        print (data)
+    return data.encode()
+
 
 
 

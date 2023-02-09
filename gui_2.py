@@ -30,6 +30,7 @@ def parse_usb_history(usb_devices_text)->List[UsbDevice]:
 
 
 
+
 class MyGUI(QWidget):
     def __init__(self):
         super().__init__()
