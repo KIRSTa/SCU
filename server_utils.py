@@ -9,12 +9,10 @@ def get_hash_from_file(path_file):
     return h.hexdigest()
 
 def get_example_program():
-    subprocess.getoutput('zgrep " installed " /var/log/dpkg.log* >> ex_prog.txt')
-    with open("ex_prog.txt", 'r') as f:
-        data = f.readlines()
-        data = ''.join([''.join(s.split(' ')[-2:]) for s in data])
-        h= hashlib.sha256()
-        h.update(data.encode())
+    data  = subprocess.getoutput('zgrep " installed " /var/log/dpkg.log* ')
+    data = ''.join([''.join(s.split(' ')[-2:]) for s in data])
+    h = hashlib.sha256()
+    h.update(data.encode())
     return h.hexdigest()
 
 def get_bash_history():
