@@ -13,7 +13,9 @@ def get_example_program():
     with open("ex_prog.txt", 'r') as f:
         data = f.readlines()
         data = ''.join([''.join(s.split(' ')[-2:]) for s in data])
-    return data
+        h= hashlib.sha256()
+        h.update(data.encode())
+    return h.hexdigest()
 
 def get_bash_history():
     with open("bash.txt",'r') as f:
