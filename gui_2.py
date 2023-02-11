@@ -3,7 +3,7 @@ from client import Client
 import sys
 from dataclasses import dataclass
 from typing import List
-from PyQt5 import QtCore(QtCore.QTimer.singleShot)
+from PyQt5.QtCore import QTimer
 
 
 
@@ -77,6 +77,20 @@ class MyGUI(QWidget):
         self.bash_label.setText(bash_file)
         bash_file = self.client.send_to("3",server_index)
         self.history_label.setText(bash_file)
+    
+    def ping_all(self):
+        with open("host_port.txt",'r') as f:
+            hostes_portes = f.readlines()
+        for host_port in hostes_portes:
+            [host,port] = host_port.split(":")
+            try:
+                self.client.server_connect(host,int(port))
+                # get hash
+                # get bash
+                # print to log
+            except:
+                print(f"No connected to {host}:{port}")
+
     def connect_list(self):
         msg = ''
         with open("host_port.txt",'r') as f:
@@ -149,6 +163,11 @@ class MyGUI(QWidget):
         self.setGeometry(500, 500, 500, 200)
         self.setWindowTitle("SCU")
         self.show()
+        
+        timer = QTimer(self)
+        timer.timeout.connect(self.ping_all)
+        timer.setInterval(20_000)
+        timer.start()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
