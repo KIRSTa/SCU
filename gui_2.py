@@ -3,6 +3,9 @@ from client import Client
 import sys
 from dataclasses import dataclass
 from typing import List
+from PyQt5 import QtCore(QtCore.QTimer.singleShot)
+
+
 
 @dataclass
 class UsbDevice:
@@ -16,6 +19,11 @@ class UsbDevice:
     Bus_Port: str
     Disconnected: str
 
+def get_hash_system():
+    with open("hash.txt",'r') as f:
+            hash_system = f.read()
+    return hash_system
+        
 def parse_usb_history(usb_devices_text)->List[UsbDevice]:
     data = usb_devices_text.split("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")[1:]
     devices = []
@@ -59,10 +67,8 @@ class MyGUI(QWidget):
         server_index = self.combo_box.currentIndex()
         ex_prog = self.client.send_to("5",server_index)
         
-        if ex_prog != "096d295956f2dcd973b96219e278930398d8a4f84aae334f3e5f79e8ff50bd18":
+        if ex_prog != get_hash_system():
             QMessageBox.about(self,"Programm","Изменение программ")
-
-    
 
 
     def get_bash(self):
