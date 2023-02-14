@@ -1,45 +1,6 @@
-from dataclasses import dataclass
-from typing import List
+from datetime import datetime
 
-
-@dataclass
-class UsbDevice:
-    Connected: str
-    Host: str
-    VID: str
-    PID: str
-    Product: str
-    Manufacturer: str
-    Serial_Number: str
-    Bus_Port: str
-    Disconnected: str
-
-
-def parse_usb_history(usb_devices_text)->List[UsbDevice]:
-    data = usb_devices_text.split("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")[1:]
-    devices = []
-    for device in data[1:-1]:
-        devices.append(
-            UsbDevice(
-                *[d.split(": ")[-1].replace(" ", "") for d in device[1:-1].split("\n")]
-            )
-        )
-
-    return devices
-
-
-devices = parse_usb_history()
-
-# d2 = devices[1]
-# print(d2.PID)
-
-# for device in devices:
-#     print(f'Product: {device.Product}, PID: {device.PID}')
-
-# a = ["a","a","a","a","a","a","a","a","b"]
-
-
-# print(len(devices))
-# print(devices[0].Product)
-# # for device in devices:
-#     # print(device.Product)
+def write_logs(host,port,error_bash,error_hash,error_conn):
+    with open("logs.txt",'a') as f:
+        f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | {host} : {port} | {error_bash} | {error_hash} | {error_conn}\n")
+write_logs("localhost",3090,True,False,True)

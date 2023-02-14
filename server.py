@@ -36,8 +36,10 @@ class Server:
                 example = get_example_program()
                 self.client_conn.send(example.encode())
                 print(example)
+            elif inp =="ping":
+                self.client_conn.send(b'ok')
                 
             print(data.decode('UTF-8'))
         
-server = Server('localhost',3007)
+server = Server('localhost',3008)
 server.run()

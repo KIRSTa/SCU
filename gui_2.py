@@ -4,8 +4,7 @@ import sys
 from dataclasses import dataclass
 from typing import List
 from PyQt5.QtCore import QTimer
-
-
+from datetime import datetime
 
 @dataclass
 class UsbDevice:
@@ -35,12 +34,18 @@ def parse_usb_history(usb_devices_text)->List[UsbDevice]:
         )
 
     return devices
+    
+def write_logs(host,port,error_bash,error_hash,error_conn):
+    with open("logs.txt",'a') as f:
+        f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | {host} : {port} | {error_bash} | {error_hash} | {error_conn}\n")
+
 
 class MyGUI(QWidget):
     def __init__(self):
         super().__init__()
         self.initUI()
         self.client = Client()
+
     def conn(self):
         host = self.host_line_edit.text()
         port = self.port_line_edit.text()
@@ -49,6 +54,7 @@ class MyGUI(QWidget):
             self.combo_box.addItem(f"{host} : {port}")            
         except:
             QMessageBox.about(self,"allert",f"{host} : {port} crashed")
+
     def get_hash(self):
         server_index = self.combo_box.currentIndex()
         hash_file = self.client.send_to("1",server_index) 
@@ -63,6 +69,7 @@ class MyGUI(QWidget):
             msg += "=========================\n"
             msg += f'Connected:{device.Connected}\nProduct:{device.Product}\nSerial_Number:{device.Serial_Number}\nBus_Port:{device.Bus_Port}\n'
         QMessageBox.about(self,"Devices",msg)
+
     def get_ex_prog(self):
         server_index = self.combo_box.currentIndex()
         ex_prog = self.client.send_to("5",server_index)
@@ -70,26 +77,26 @@ class MyGUI(QWidget):
         if ex_prog != get_hash_system():
             QMessageBox.about(self,"Programm","Изменение программ")
 
-
     def get_bash(self):
         server_index = self.combo_box.currentIndex()
         bash_file = self.client.send_to("2",server_index)
         self.bash_label.setText(bash_file)
         bash_file = self.client.send_to("3",server_index)
         self.history_label.setText(bash_file)
+        return bash_file
     
     def ping_all(self):
-        with open("host_port.txt",'r') as f:
-            hostes_portes = f.readlines()
-        for host_port in hostes_portes:
-            [host,port] = host_port.split(":")
+        for index_server in range(self.combo_box.count()):
+            [host,port] = self.combo_box.itemText(index_server).split(":")
             try:
-                self.client.server_connect(host,int(port))
-                # get hash
-                # get bash
-                # print to log
+                self.client.send_to("ping",index_server)
+                errors = ["False"==self.get_bash(),False,False]
+                if True in errors:
+                    write_logs(host,port[:-1],*errors)
             except:
-                print(f"No connected to {host}:{port}")
+                QMessageBox.about(self,"Warning",f'no connected - {host} : {port}')
+                self.client.server_reconnect(host,int(port),index_server) 
+    
 
     def connect_list(self):
         msg = ''
@@ -105,9 +112,7 @@ class MyGUI(QWidget):
             except:
                 msg += " no connect... \n"
         QMessageBox.about(self,"allert",msg)
-        
-
-        
+            
     def initUI(self):
         grid = QGridLayout()
         
