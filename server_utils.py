@@ -34,4 +34,5 @@ def get_usb_devices():
         data = f.read()
     return data.encode()
 
+
 forbidden_commands = ["sudo","nmap","shutdown"]
