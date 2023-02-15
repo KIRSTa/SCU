@@ -122,7 +122,7 @@ class MyGUI(QWidget):
 
     def set_bash_bool_on_label(self):
         bash_file = self.get_bash_bool()
-        self.history_label.setText(bash_file)
+        self.history_label.setText(str(bash_file))
 
     def ping_all(self):
         for index_server in range(self.combo_box.count()):
