@@ -158,9 +158,9 @@ class MyGUI(QWidget):
         if server_index is None:
             server_index = self.combo_box.currentIndex()
         screenshot = self.client.send_to("screen", server_index,False)
-        with open ("screenshot_1.png", "wb") as f:
+        with open (f"{datetime.now().strftime('%Y-%m-%d %H_%M_%S')}_{server_index}.png", "wb") as f:
             f.write(screenshot)
-        
+
         
 
 
