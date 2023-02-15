@@ -16,8 +16,12 @@ class Client:
             self.servers[index] = self.sock_user
         except:
             pass
+    
 
-    def send_to(self,msg,server_index):
+    def send_to(self,msg,server_index,to_text=True):
         self.servers[server_index].send(msg.encode())
-        output=self.servers[server_index].recv(10024)
-        return output.decode("UTF-8")
+        if to_text:
+            output=self.servers[server_index].recv(10024)
+        else:
+            output=self.servers[server_index].recv(200024)
+        return output.decode("UTF-8") if to_text else output

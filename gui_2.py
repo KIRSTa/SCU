@@ -10,6 +10,7 @@ from PyQt5.QtWidgets import (
 )
 from client import Client
 import sys
+import mss
 from dataclasses import dataclass
 from typing import List
 from PyQt5.QtCore import QTimer
@@ -153,6 +154,15 @@ class MyGUI(QWidget):
             except:
                 msg += " no connect... \n"
         QMessageBox.about(self, "allert", msg)
+    def screenshot(self,server_index):
+        if server_index is None:
+            server_index = self.combo_box.currentIndex()
+        screenshot = self.client.send_to("screen", server_index,False)
+        with open ("screenshot_1.png", "wb") as f:
+            f.write(screenshot)
+        
+        
+
 
     def initUI(self):
         grid = QGridLayout()
@@ -172,8 +182,8 @@ class MyGUI(QWidget):
         self.combo_box = QComboBox()
         self.combo_box.setFixedWidth(150)
 
-        self.button_hash = QPushButton("Get Hash")
-        self.button_hash.clicked.connect(self.set_hash_on_label)
+        self.button_hash = QPushButton("Get_screenshot")
+        self.button_hash.clicked.connect(self.screenshot)
 
         self.button_bash = QPushButton("Get Bash")
         self.button_bash.clicked.connect(self.set_bash_on_label)

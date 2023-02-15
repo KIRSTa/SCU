@@ -1,5 +1,6 @@
 import socket
 from server_utils import *
+import mss
 
 class Server:
     def __init__(self,host,port) :
@@ -38,8 +39,13 @@ class Server:
                 print(example)
             elif inp =="ping":
                 self.client_conn.send(b'ok')
-                
-            print(data.decode('UTF-8'))
+            elif inp =="screen":
+                with mss.mss() as sct:
+                    filename = sct.shot(output="screen.png")
+                with open (filename,"rb") as f:
+                    data=f.read()
+                    self.client_conn.send(data)
+                print(filename)
         
 server = Server('localhost',3009)
 server.run()
