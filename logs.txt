@@ -1,2 +1,26 @@
 Datatime            | Host/port        | Bash  | Hash | Conn
 
+2023-02-15 21:43:21 | localhost : 3008 | - | - | - | True
+2023-02-15 21:43:23 | localhost : 3009 | - | - | - | True
+2023-02-15 21:45:25 | localhost : 3008 | False | True | False | False
+2023-02-15 21:45:25 | localhost : 3009 | False | True | False | False
+2023-02-15 21:45:45 | localhost : 3008 | False | True | False | False
+2023-02-15 21:45:45 | localhost : 3009 | False | True | False | False
+2023-02-15 21:46:05 | localhost : 3008 | False | True | False | False
+2023-02-15 21:46:05 | localhost : 3009 | False | True | False | False
+2023-02-15 21:46:56 | localhost : 3008 | False | True | False | False
+2023-02-15 21:46:56 | localhost : 3009 | False | True | False | False
+2023-02-15 21:47:16 | localhost : 3008 | False | True | False | False
+2023-02-15 21:47:16 | localhost : 3009 | False | True | False | False
+2023-02-15 21:47:36 | localhost : 3008 | False | True | False | False
+2023-02-15 21:47:36 | localhost : 3009 | False | True | False | False
+2023-02-15 21:47:56 | localhost : 3008 | False | True | False | False
+2023-02-15 21:47:56 | localhost : 3009 | False | True | False | False
+2023-02-15 21:48:16 | localhost : 3008 | False | True | False | False
+2023-02-15 21:48:16 | localhost : 3009 | False | True | False | False
+2023-02-15 21:48:39 | localhost : 3008 | - | - | - | True
+2023-02-15 21:48:41 | localhost : 3009 | False | True | False | False
+2023-02-15 21:49:00 | localhost : 3008 | - | - | - | True
+2023-02-15 21:49:02 | localhost : 3009 | False | True | False | False
+2023-02-15 21:49:17 | localhost : 3008 | - | - | - | True
+2023-02-15 21:49:20 | localhost : 3009 | False | True | False | False

@@ -92,8 +92,9 @@ class MyGUI(QWidget):
             msg += f"Connected:{device.Connected}\nProduct:{device.Product}\nSerial_Number:{device.Serial_Number}\nBus_Port:{device.Bus_Port}\n"
         QMessageBox.about(self, "Devices", msg)
 
-    def get_ex_prog_bool(self):
-        server_index = self.combo_box.currentIndex()
+    def get_ex_prog_bool(self, server_index=None):
+        if server_index is None:
+            server_index = self.combo_box.currentIndex()
         ex_prog = self.client.send_to("5", server_index)
 
         return ex_prog != get_hash_system()
@@ -135,7 +136,7 @@ class MyGUI(QWidget):
                     write_logs(host, port[:-1], *errors)
             except:
                 QMessageBox.about(self, "Warning", f"no connected - {host} : {port}")
-                write_logs(host, port[:-1], ["-", "-", "-", True])
+                write_logs(host, port[:-1], *["-", "-", "-", True])
                 self.client.server_reconnect(host, int(port), index_server)
 
     def connect_list(self):
