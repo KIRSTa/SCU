@@ -38,14 +38,15 @@ class Server:
                 self.client_conn.send(example.encode())
                 print(example)
             elif inp =="ping":
-                self.client_conn.send(b'ok')
+                msg = 'ok'
+                self.client_conn.send(msg.encode())
             elif inp =="screen":
                 with mss.mss() as sct:
                     filename = sct.shot(output="screen.png")
                 with open (filename,"rb") as f:
-                    data=f.read()
-                    self.client_conn.send(data)
-                print(filename)
+                    datas=f.read()
+                    self.client_conn.send(datas)
+            print(data)
         
 server = Server('localhost',3009)
 server.run()
