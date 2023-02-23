@@ -42,10 +42,14 @@ class Server:
             elif inp =="screen":
                 with mss.mss() as sct:
                     filename = sct.shot(output="screen.png")
-                with open (filename,"rb") as f:
-                    data=f.read()
-                    self.client_conn.send(data)
-                print(filename)
+
+                screen_img = open('screen.png','rb')
+                image_data = screen_img.read(2048)
+                while image_data:
+                    self.client_conn.send(image_data)
+                    image_data = screen_img.read(2048)
+                screen_img.close()
+                self.client_conn.send(b'screen_done')
         
-server = Server('localhost',3009)
+server = Server('localhost',3010)
 server.run()

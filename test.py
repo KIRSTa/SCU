@@ -1,6 +1,5 @@
-from datetime import datetime
+from client import Client 
 
-def write_logs(host,port,error_bash,error_hash,error_conn):
-    with open("logs.txt",'a') as f:
-        f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | {host} : {port} | {error_bash} | {error_hash} | {error_conn}\n")
-write_logs("localhost",3090,True,False,True)
+c1 = Client()
+c1.server_connect('localhost',3010)
+print(c1.send_to('2',0))

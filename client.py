@@ -1,4 +1,5 @@
 import socket
+from datetime import datetime
 
 class Client:
     def __init__(self) -> None:
@@ -24,3 +25,19 @@ class Client:
         else:
             output=self.servers[server_index].recv(30_0024)
         return output.decode() if to_text else output
+    
+    def get_image_from_server(self,server_index):
+        self.servers[server_index].send(b'screen')
+        screen_file = open(f"{datetime.now().strftime('%Y-%m-%d %H_%M_%S')}_{server_index}.png",'wb')
+        while True:
+            image_chunk = self.servers[server_index].recv(2048)
+            if b'screen_done' in image_chunk:
+                screen_file.write(image_chunk)
+                
+                break 
+            else:
+                screen_file.write(image_chunk)
+        
+        screen_file.close()
+
+

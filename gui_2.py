@@ -79,9 +79,6 @@ class MyGUI(QWidget):
         hash_file = self.client.send_to("1", server_index)
         return hash_file
 
-    def set_hash_on_label(self):
-        hash_file = self.get_bash()
-        self.hash_label.setText(hash_file)
 
     def get_usb_devices(self):
         server_index = self.combo_box.currentIndex()
@@ -110,10 +107,6 @@ class MyGUI(QWidget):
         bash_file = self.client.send_to("2", server_index)
         return bash_file
 
-    def set_bash_on_label(self):
-        bash_file = self.get_bash()
-        self.bash_label.setText(bash_file)
-        self.set_bash_bool_on_label()
 
     def get_bash_bool(self, server_index=None):
         if server_index is None:
@@ -121,9 +114,6 @@ class MyGUI(QWidget):
         bash_file = self.client.send_to("3", server_index)
         return bash_file == "True"
 
-    def set_bash_bool_on_label(self):
-        bash_file = self.get_bash_bool()
-        self.history_label.setText(str(bash_file))
 
     def ping_all(self):
         for index_server in range(self.combo_box.count()):
@@ -157,9 +147,7 @@ class MyGUI(QWidget):
     def screenshot(self,server_index):
         if server_index is None:
             server_index = self.combo_box.currentIndex()
-        screenshot = self.client.send_to("screen", server_index,False)
-        with open (f"{datetime.now().strftime('%Y-%m-%d %H_%M_%S')}_{server_index}.png", "wb") as f:
-            f.write(screenshot)
+        self.client.get_image_from_server(server_index)
 
         
 
@@ -170,9 +158,6 @@ class MyGUI(QWidget):
         self.host_line_edit = QLineEdit()
         self.port_line_edit = QLineEdit()
 
-        self.hash_label = QLabel("HASH")
-        self.bash_label = QLabel("BASH")
-        self.history_label = QLabel("Allarm")
         self.host_label = QLabel("Enter host")
         self.port_label = QLabel("Enter port")
 
@@ -185,17 +170,11 @@ class MyGUI(QWidget):
         self.button_hash = QPushButton("Get_screenshot")
         self.button_hash.clicked.connect(self.screenshot)
 
-        self.button_bash = QPushButton("Get Bash")
-        self.button_bash.clicked.connect(self.set_bash_on_label)
 
         self.button_connect_list = QPushButton("Connect list")
         self.button_connect_list.clicked.connect(self.connect_list)
 
-        self.button_get_usb = QPushButton("Get USB devices")
-        self.button_get_usb.clicked.connect(self.get_usb_devices)
 
-        self.button_get_prog = QPushButton("Get example programm")
-        self.button_get_prog.clicked.connect(self.get_ex_prog)
 
         grid.addWidget(self.host_line_edit, 0, 1)
         grid.addWidget(self.port_line_edit, 1, 1)
@@ -203,14 +182,9 @@ class MyGUI(QWidget):
         grid.addWidget(self.combo_box, 0, 2)
         grid.addWidget(self.button_connect_list, 1, 2)
         grid.addWidget(self.button_hash, 2, 2)
-        grid.addWidget(self.button_bash, 3, 2)
-        grid.addWidget(self.button_get_prog, 4, 2)
         grid.addWidget(self.host_label, 0, 0)
         grid.addWidget(self.port_label, 1, 0)
-        grid.addWidget(self.hash_label, 3, 1)
-        grid.addWidget(self.bash_label, 4, 1)
-        grid.addWidget(self.history_label, 5, 1)
-        grid.addWidget(self.button_get_usb, 3, 3)
+ 
 
         self.setLayout(grid)
 

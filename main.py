@@ -68,6 +68,7 @@ class MainWindow(QWidget):
             if self.w is None:
                 self.w = MyGUI()
                 self.w.show()
+                self.showMinimized()
 
 
 app = QApplication(sys.argv)

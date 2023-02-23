@@ -1,14 +1,14 @@
 import sqlite3
-
+from hashlib import sha256
 
 class DBController:
-    def __init__(self, db_name="t.db") -> None:
+    def __init__(self, db_name="t.sqlite") -> None:
         self.con = sqlite3.connect(db_name)
         self.cursor = self.con.cursor()
 
         if not self._table_exists():
             self._create_table()
-            self.add_user("admin", "admin")
+            self.add_user( "admin", "admin")
 
     def _table_exists(self):
         self.cursor.execute("""SELECT name FROM sqlite_master WHERE name='users'""")
@@ -26,8 +26,10 @@ class DBController:
         self.con.commit()
 
     def add_user(self, login, password):
+        login_hash = sha256(login.encode('UTF-8')).hexdigest()
+        passw_hash = sha256(password.encode('UTF-8')).hexdigest()
         self.cursor.execute(
-            "INSERT INTO users (login, password) VALUES (?, ?)", (login, password)
+            "INSERT INTO users (login, password) VALUES (?, ?)", (login_hash, passw_hash)
         )
         self.con.commit()
 
@@ -36,13 +38,16 @@ class DBController:
         return self.cursor.fetchall()
 
     def is_login_exists(self, login):
-        self.cursor.execute(f"SELECT id  FROM users WHERE login == '{login}'")
+        login_hash = sha256(login.encode('UTF-8')).hexdigest()
+        self.cursor.execute(f"SELECT id  FROM users WHERE login == '{login_hash}'")
         users = self.cursor.fetchall()
         return len(users) == 1
 
     def verification(self, login, password):
+        login_hash = sha256(login.encode('UTF-8')).hexdigest()
+        passw_hash = sha256(password.encode('UTF-8')).hexdigest()
         self.cursor.execute(
-            f"SELECT id  FROM users WHERE login == '{login}' AND password == '{password}'"
+            f"SELECT id  FROM users WHERE login == '{login_hash}' AND password == '{passw_hash}'"
         )
         users = self.cursor.fetchall()
         return len(users) >= 1

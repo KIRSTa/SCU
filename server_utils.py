@@ -16,9 +16,8 @@ def get_example_program():
     return h.hexdigest()
 
 def get_bash_history():
-    with open("bash.txt",'r') as f:
-        text = f.read()
-    return text
+    data  = subprocess.getoutput('cat ~/.bash_history')
+    return data
 
 def get_check(text,f_commands):
     all_commands = text.splitlines()
