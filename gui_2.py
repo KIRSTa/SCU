@@ -147,7 +147,8 @@ class MyGUI(QWidget):
     def screenshot(self,server_index):
         if server_index is None:
             server_index = self.combo_box.currentIndex()
-        self.client.get_image_from_server(server_index)
+        [host, port] = self.combo_box.itemText(server_index).split(":")
+        self.client.get_image_from_server(server_index,host,port[:-1])
 
         
 

