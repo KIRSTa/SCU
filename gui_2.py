@@ -14,6 +14,7 @@ import mss
 from dataclasses import dataclass
 from typing import List
 from PyQt5.QtCore import QTimer
+from db_controller import DBController
 from datetime import datetime
 
 
@@ -29,11 +30,6 @@ class UsbDevice:
     Bus_Port: str
     Disconnected: str
 
-
-def get_hash_system():
-    with open("hash.txt", "r") as f:
-        hash_system = f.read()
-    return hash_system
 
 
 def parse_usb_history(usb_devices_text) -> List[UsbDevice]:
@@ -51,10 +47,10 @@ def parse_usb_history(usb_devices_text) -> List[UsbDevice]:
     return devices
 
 
-def write_logs(host, port, error_bash, error_hash, error_prog, error_conn):
+def write_logs(host, port, error_bash, error_prog, error_usb, error_conn):
     with open("logs.txt", "a") as f:
         f.write(
-            f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | {host} : {port} | {error_bash} | {error_hash} | {error_prog} | {error_conn}\n"
+            f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | {host} : {port} | {error_bash} | {error_prog} | {error_usb} | {error_conn}\n"
         )
 
 
@@ -63,6 +59,7 @@ class MyGUI(QWidget):
         super().__init__()
         self.initUI()
         self.client = Client()
+        self.db_controller = DBController()
 
     def conn(self):
         host = self.host_line_edit.text()
@@ -80,26 +77,41 @@ class MyGUI(QWidget):
         return hash_file
 
 
-    def get_usb_devices(self):
-        server_index = self.combo_box.currentIndex()
-        usb_devices = self.client.send_to("4", server_index)
-        devices = parse_usb_history(usb_devices)
-        msg = ""
-        for device in devices:
-            msg += "=========================\n"
-            msg += f"Connected:{device.Connected}\nProduct:{device.Product}\nSerial_Number:{device.Serial_Number}\nBus_Port:{device.Bus_Port}\n"
-        QMessageBox.about(self, "Devices", msg)
-
-    def get_ex_prog_bool(self, server_index=None):
+    def check_usb_devices(self,server_index=None):
         if server_index is None:
             server_index = self.combo_box.currentIndex()
-        ex_prog = self.client.send_to("5", server_index)
 
-        return ex_prog != get_hash_system()
+        usb_devices = self.client.send_to("4", server_index)
+        devices = parse_usb_history(usb_devices)
+        usb_data = "".join([f"{device.Product}{device.Serial_Number}{device.Bus_Port}" for device in devices])
+        host_port = self.combo_box.itemText(server_index)
 
-    def get_ex_prog(self):
-        if self.get_ex_prog_bool():
-            QMessageBox.about(self, "Programm", "Изменение программ")
+
+        if not self.db_controller.is_comp_exists():
+            prog_data = self.client.send_to("5", server_index)
+            self.db_controller.add_comp(host_port,usb_data,prog_data)
+            return False
+        else:
+            return self.db_controller.check_usb(host_port,usb_data)
+        
+
+    def check_prog(self,server_index=None):
+        if server_index is None:
+            server_index = self.combo_box.currentIndex()
+
+        host_port = self.combo_box.itemText(server_index)
+        prog_data = self.client.send_to("5", server_index)
+
+        if not self.db_controller.is_comp_exists():
+            usb_devices = self.client.send_to("4", server_index)
+            devices = parse_usb_history(usb_devices)
+            usb_data = "".join([f"{device.Product}{device.Serial_Number}{device.Bus_Port}" for device in devices])
+            
+            self.db_controller.add_comp(host_port,usb_data,prog_data)
+            return False
+        else:
+            return self.db_controller.check_prog(host_port,prog_data)
+
 
     def get_bash(self, server_index=None):
         if server_index is None:
@@ -121,8 +133,10 @@ class MyGUI(QWidget):
             try:
                 self.client.send_to("ping", index_server)
                 bash_error = self.get_bash_bool(index_server)
-                prog_error = self.get_ex_prog_bool(index_server)
-                errors = [bash_error, prog_error, False, False]
+                prog_error = self.check_prog(index_server)
+                usb_error = self.check_usb_devices(index_server)
+
+                errors = [bash_error, prog_error ,usb_error, False]
                 if True in errors:
                     write_logs(host, port[:-1], *errors)
             except:

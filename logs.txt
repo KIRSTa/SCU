@@ -1,4 +1,4 @@
-Datatime            | Host/port        | Bash  | Hash | Conn
+Datatime            | Host/port        | Bash  | PROG | USB   |Conn
 
 2023-02-15 21:43:21 | localhost : 3008 | - | - | - | True
 2023-02-15 21:43:23 | localhost : 3009 | - | - | - | True
