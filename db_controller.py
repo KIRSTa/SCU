@@ -43,12 +43,14 @@ class DBController:
         self.con.commit()
     
     def add_comp(self,host_port,usb_data,prog_data):
+        
         hash_usb = sha256(usb_data.encode('UTF-8')).hexdigest()
         hash_prog = sha256(prog_data.encode('UTF-8')).hexdigest()
         self.cursor.execute(
             "INSERT INTO comps (hostport,hashusb,hashprog) VALUES (?, ?,?)", (host_port, hash_usb,hash_prog)
         )
         self.con.commit()
+        
     
     def get_hash_usb_by_host_port(self,host_port):
         self.cursor.execute(f"SELECT hashusb FROM comps WHERE hostport == {host_port}")

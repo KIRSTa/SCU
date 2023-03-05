@@ -87,7 +87,7 @@ class MyGUI(QWidget):
         host_port = self.combo_box.itemText(server_index)
 
 
-        if not self.db_controller.is_comp_exists():
+        if not self.db_controller.is_comp_exists(host_port):
             prog_data = self.client.send_to("5", server_index)
             self.db_controller.add_comp(host_port,usb_data,prog_data)
             return False
@@ -102,7 +102,7 @@ class MyGUI(QWidget):
         host_port = self.combo_box.itemText(server_index)
         prog_data = self.client.send_to("5", server_index)
 
-        if not self.db_controller.is_comp_exists():
+        if not self.db_controller.is_comp_exists(host_port):
             usb_devices = self.client.send_to("4", server_index)
             devices = parse_usb_history(usb_devices)
             usb_data = "".join([f"{device.Product}{device.Serial_Number}{device.Bus_Port}" for device in devices])
@@ -135,6 +135,7 @@ class MyGUI(QWidget):
                 bash_error = self.get_bash_bool(index_server)
                 prog_error = self.check_prog(index_server)
                 usb_error = self.check_usb_devices(index_server)
+               
 
                 errors = [bash_error, prog_error ,usb_error, False]
                 if True in errors:
