@@ -46,21 +46,22 @@ class MainWindow(QWidget):
         if self.db_controller.verification(login, passw):
             return True
         else:
-            QMessageBox.about(self, "Ошибка!", "Не правельный пароль или логин!")
+            QMessageBox.about(
+                self, "Ошибка!", "Не правельный пароль или логин!")
             return False
-    
+
     def registration(self):
         if self.is_verify:
             login = self.login_line_edit.text()
             passw = self.passw_line_edit.text()
 
             if not self.db_controller.is_login_exists(login):
-                self.db_controller.add_user(login,passw)
-                QMessageBox.about(self,"Ок",f"Пользователь {login} создан.")
+                self.db_controller.add_user(login, passw)
+                QMessageBox.about(self, "Ок", f"Пользователь {login} создан.")
             else:
-                QMessageBox.about(self,"Ошибка","Такой логин уже есть.")
+                QMessageBox.about(self, "Ошибка", "Такой логин уже есть.")
         else:
-            QMessageBox.about(self,"Ошибка","Вы не авторизованы!")
+            QMessageBox.about(self, "Ошибка", "Вы не авторизованы!")
 
     def show_main_app(self):
         if self.check_passw_and_login():

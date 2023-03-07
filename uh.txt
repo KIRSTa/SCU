@@ -1,28 +1,28 @@
 
 USB-History-Events
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-21 14:23:59
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-03-05 17:39:40
+Host:           bob-virtual-machine
 VID:            1d6b
 PID:            0002
 Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
+Manufacturer:   Linux 5.19.0-35-generic ehci_hcd
 Serial Number:  0000:02:03.0
 Bus-Port:       usb1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-21 14:23:59
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-03-05 17:39:40
+Host:           bob-virtual-machine
 VID:            1d6b
 PID:            0001
 Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
+Manufacturer:   Linux 5.19.0-35-generic uhci_hcd
 Serial Number:  0000:02:00.0
 Bus-Port:       usb2
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-21 14:23:59
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-03-05 17:39:40
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0003
 Product:        VMware Virtual USB Mouse
@@ -30,9 +30,9 @@ Manufacturer:   VMware
 Serial Number:  ∅
 Bus-Port:       2-1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-21 14:23:59
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-03-05 17:39:40
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0002
 Product:        VMware Virtual USB Hub
@@ -40,89 +40,9 @@ Manufacturer:   VMware, Inc.
 Serial Number:  ∅
 Bus-Port:       2-2
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-22 22:40:38
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-22 22:40:38
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-22 22:40:38
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-22 22:40:38
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-03-05 17:39:40
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0008
 Product:        Virtual Bluetooth Adapter
@@ -130,29 +50,29 @@ Manufacturer:   VMware
 Serial Number:  000650268328
 Bus-Port:       2-2.1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-21 23:44:07
+Host:           bob-virtual-machine
 VID:            1d6b
 PID:            0002
 Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
+Manufacturer:   Linux 5.19.0-31-generic ehci_hcd
 Serial Number:  0000:02:03.0
 Bus-Port:       usb1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-21 23:44:07
+Host:           bob-virtual-machine
 VID:            1d6b
 PID:            0001
 Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
+Manufacturer:   Linux 5.19.0-31-generic uhci_hcd
 Serial Number:  0000:02:00.0
 Bus-Port:       usb2
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-21 23:44:07
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0003
 Product:        VMware Virtual USB Mouse
@@ -160,9 +80,9 @@ Manufacturer:   VMware
 Serial Number:  ∅
 Bus-Port:       2-1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-21 23:44:07
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0002
 Product:        VMware Virtual USB Hub
@@ -170,9 +90,9 @@ Manufacturer:   VMware, Inc.
 Serial Number:  ∅
 Bus-Port:       2-2
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-21 23:44:07
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0008
 Product:        Virtual Bluetooth Adapter
@@ -180,29 +100,29 @@ Manufacturer:   VMware
 Serial Number:  000650268328
 Bus-Port:       2-2.1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-22 18:22:50
+Host:           bob-virtual-machine
 VID:            1d6b
 PID:            0002
 Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
+Manufacturer:   Linux 5.19.0-31-generic ehci_hcd
 Serial Number:  0000:02:03.0
 Bus-Port:       usb1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-22 18:22:50
+Host:           bob-virtual-machine
 VID:            1d6b
 PID:            0001
 Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
+Manufacturer:   Linux 5.19.0-31-generic uhci_hcd
 Serial Number:  0000:02:00.0
 Bus-Port:       usb2
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-22 18:22:50
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0003
 Product:        VMware Virtual USB Mouse
@@ -210,9 +130,9 @@ Manufacturer:   VMware
 Serial Number:  ∅
 Bus-Port:       2-1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-22 18:22:50
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0002
 Product:        VMware Virtual USB Hub
@@ -220,9 +140,9 @@ Manufacturer:   VMware, Inc.
 Serial Number:  ∅
 Bus-Port:       2-2
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-22 18:22:50
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0008
 Product:        Virtual Bluetooth Adapter
@@ -230,29 +150,29 @@ Manufacturer:   VMware
 Serial Number:  000650268328
 Bus-Port:       2-2.1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-22 21:47:23
+Host:           bob-virtual-machine
 VID:            1d6b
 PID:            0002
 Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
+Manufacturer:   Linux 5.19.0-31-generic ehci_hcd
 Serial Number:  0000:02:03.0
 Bus-Port:       usb1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-22 21:47:23
+Host:           bob-virtual-machine
 VID:            1d6b
 PID:            0001
 Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
+Manufacturer:   Linux 5.19.0-31-generic uhci_hcd
 Serial Number:  0000:02:00.0
 Bus-Port:       usb2
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-22 21:47:23
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0003
 Product:        VMware Virtual USB Mouse
@@ -260,9 +180,9 @@ Manufacturer:   VMware
 Serial Number:  ∅
 Bus-Port:       2-1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-22 21:47:23
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0002
 Product:        VMware Virtual USB Hub
@@ -270,9 +190,9 @@ Manufacturer:   VMware, Inc.
 Serial Number:  ∅
 Bus-Port:       2-2
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-02-22 21:47:23
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0008
 Product:        Virtual Bluetooth Adapter
@@ -280,112 +200,29 @@ Manufacturer:   VMware
 Serial Number:  000650268328
 Bus-Port:       2-2.1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-26 14:22:27
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-26 14:22:27
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-03-05 12:24:18
+Host:           bob-virtual-machine
 VID:            1d6b
 PID:            0002
 Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-26 14:22:27
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       1-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-26 14:22:27
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       1-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-27 12:18:25
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-27 12:18:25
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-27 12:18:25
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       1-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-27 12:18:25
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       1-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-
-USB-History-Events
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-21 14:23:59
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
+Manufacturer:   Linux 5.19.0-31-generic ehci_hcd
 Serial Number:  0000:02:03.0
 Bus-Port:       usb1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-21 14:23:59
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-03-05 12:24:18
+Host:           bob-virtual-machine
 VID:            1d6b
 PID:            0001
 Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
+Manufacturer:   Linux 5.19.0-31-generic uhci_hcd
 Serial Number:  0000:02:00.0
 Bus-Port:       usb2
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-21 14:23:59
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-03-05 12:24:18
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0003
 Product:        VMware Virtual USB Mouse
@@ -393,9 +230,9 @@ Manufacturer:   VMware
 Serial Number:  ∅
 Bus-Port:       2-1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-21 14:23:59
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-03-05 12:24:18
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0002
 Product:        VMware Virtual USB Hub
@@ -403,89 +240,9 @@ Manufacturer:   VMware, Inc.
 Serial Number:  ∅
 Bus-Port:       2-2
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-22 22:40:38
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-22 22:40:38
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-22 22:40:38
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-22 22:40:38
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+Connected:      ????-03-05 12:24:18
+Host:           bob-virtual-machine
 VID:            0e0f
 PID:            0008
 Product:        Virtual Bluetooth Adapter
@@ -493,597 +250,4 @@ Manufacturer:   VMware
 Serial Number:  000650268328
 Bus-Port:       2-2.1
 Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
-VID:            0e0f
-PID:            0008
-Product:        Virtual Bluetooth Adapter
-Manufacturer:   VMware
-Serial Number:  000650268328
-Bus-Port:       2-2.1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
-VID:            0e0f
-PID:            0008
-Product:        Virtual Bluetooth Adapter
-Manufacturer:   VMware
-Serial Number:  000650268328
-Bus-Port:       2-2.1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
-VID:            0e0f
-PID:            0008
-Product:        Virtual Bluetooth Adapter
-Manufacturer:   VMware
-Serial Number:  000650268328
-Bus-Port:       2-2.1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-26 14:22:27
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-26 14:22:27
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-26 14:22:27
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       1-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-26 14:22:27
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       1-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-27 12:18:25
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-27 12:18:25
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-27 12:18:25
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       1-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-27 12:18:25
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       1-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-
-USB-History-Events
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-21 14:23:59
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-21 14:23:59
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-21 14:23:59
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-21 14:23:59
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-22 22:40:38
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-22 22:40:38
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-22 22:40:38
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-02-22 22:40:38
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:17:31
-Host:           kali
-VID:            0e0f
-PID:            0008
-Product:        Virtual Bluetooth Adapter
-Manufacturer:   VMware
-Serial Number:  000650268328
-Bus-Port:       2-2.1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-25 16:27:50
-Host:           kali
-VID:            0e0f
-PID:            0008
-Product:        Virtual Bluetooth Adapter
-Manufacturer:   VMware
-Serial Number:  000650268328
-Bus-Port:       2-2.1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-26 12:18:08
-Host:           kali
-VID:            0e0f
-PID:            0008
-Product:        Virtual Bluetooth Adapter
-Manufacturer:   VMware
-Serial Number:  000650268328
-Bus-Port:       2-2.1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       2-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       2-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-08-28 05:11:58
-Host:           kali
-VID:            0e0f
-PID:            0008
-Product:        Virtual Bluetooth Adapter
-Manufacturer:   VMware
-Serial Number:  000650268328
-Bus-Port:       2-2.1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-26 14:22:27
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-26 14:22:27
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-26 14:22:27
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       1-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-26 14:22:27
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       1-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-27 12:18:25
-Host:           kali
-VID:            1d6b
-PID:            0001
-Product:        UHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 uhci_hcd
-Serial Number:  0000:02:00.0
-Bus-Port:       usb1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-27 12:18:25
-Host:           kali
-VID:            1d6b
-PID:            0002
-Product:        EHCI Host Controller
-Manufacturer:   Linux 5.18.0-kali5-amd64 ehci_hcd
-Serial Number:  0000:02:03.0
-Bus-Port:       usb2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-27 12:18:25
-Host:           kali
-VID:            0e0f
-PID:            0003
-Product:        VMware Virtual USB Mouse
-Manufacturer:   VMware
-Serial Number:  ∅
-Bus-Port:       1-1
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
-Connected:      ????-01-27 12:18:25
-Host:           kali
-VID:            0e0f
-PID:            0002
-Product:        VMware Virtual USB Hub
-Manufacturer:   VMware, Inc.
-Serial Number:  ∅
-Bus-Port:       1-2
-Disconnected:   ∅
-−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−
+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−

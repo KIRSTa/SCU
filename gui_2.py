@@ -10,7 +10,6 @@ from PyQt5.QtWidgets import (
 )
 from client import Client
 import sys
-import mss
 from dataclasses import dataclass
 from typing import List
 from PyQt5.QtCore import QTimer
@@ -31,7 +30,6 @@ class UsbDevice:
     Disconnected: str
 
 
-
 def parse_usb_history(usb_devices_text) -> List[UsbDevice]:
     data = usb_devices_text.split("−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−")[
         1:
@@ -50,7 +48,7 @@ def parse_usb_history(usb_devices_text) -> List[UsbDevice]:
 def write_logs(host, port, error_bash, error_prog, error_usb, error_conn):
     with open("logs.txt", "a") as f:
         f.write(
-            f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | {host} : {port} | {error_bash} | {error_prog} | {error_usb} | {error_conn}\n"
+            f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | {host} : {port} | {str(error_bash):<5} | {str(error_prog):<5} | {str(error_usb):<5} | {str(error_conn):<5}\n"
         )
 
 
@@ -76,26 +74,24 @@ class MyGUI(QWidget):
         hash_file = self.client.send_to("1", server_index)
         return hash_file
 
-
-    def check_usb_devices(self,server_index=None):
+    def check_usb_devices(self, server_index=None):
         if server_index is None:
             server_index = self.combo_box.currentIndex()
 
         usb_devices = self.client.send_to("4", server_index)
         devices = parse_usb_history(usb_devices)
-        usb_data = "".join([f"{device.Product}{device.Serial_Number}{device.Bus_Port}" for device in devices])
+        usb_data = "".join(
+            [f"{device.Product}{device.Serial_Number}{device.Bus_Port}" for device in devices])
         host_port = self.combo_box.itemText(server_index)
-
 
         if not self.db_controller.is_comp_exists(host_port):
             prog_data = self.client.send_to("5", server_index)
-            self.db_controller.add_comp(host_port,usb_data,prog_data)
+            self.db_controller.add_comp(host_port, usb_data, prog_data)
             return False
         else:
-            return self.db_controller.check_usb(host_port,usb_data)
-        
+            return self.db_controller.check_usb(host_port, usb_data)
 
-    def check_prog(self,server_index=None):
+    def check_prog(self, server_index=None):
         if server_index is None:
             server_index = self.combo_box.currentIndex()
 
@@ -105,13 +101,13 @@ class MyGUI(QWidget):
         if not self.db_controller.is_comp_exists(host_port):
             usb_devices = self.client.send_to("4", server_index)
             devices = parse_usb_history(usb_devices)
-            usb_data = "".join([f"{device.Product}{device.Serial_Number}{device.Bus_Port}" for device in devices])
-            
-            self.db_controller.add_comp(host_port,usb_data,prog_data)
+            usb_data = "".join(
+                [f"{device.Product}{device.Serial_Number}{device.Bus_Port}" for device in devices])
+
+            self.db_controller.add_comp(host_port, usb_data, prog_data)
             return False
         else:
-            return self.db_controller.check_prog(host_port,prog_data)
-
+            return self.db_controller.check_prog(host_port, prog_data)
 
     def get_bash(self, server_index=None):
         if server_index is None:
@@ -119,13 +115,11 @@ class MyGUI(QWidget):
         bash_file = self.client.send_to("2", server_index)
         return bash_file
 
-
     def get_bash_bool(self, server_index=None):
         if server_index is None:
             server_index = self.combo_box.currentIndex()
         bash_file = self.client.send_to("3", server_index)
         return bash_file == "True"
-
 
     def ping_all(self):
         for index_server in range(self.combo_box.count()):
@@ -135,14 +129,16 @@ class MyGUI(QWidget):
                 bash_error = self.get_bash_bool(index_server)
                 prog_error = self.check_prog(index_server)
                 usb_error = self.check_usb_devices(index_server)
-               
 
-                errors = [bash_error, prog_error ,usb_error, False]
+                errors = [bash_error, not prog_error, not usb_error, False]
                 if True in errors:
                     write_logs(host, port[:-1], *errors)
-            except:
-                QMessageBox.about(self, "Warning", f"no connected - {host} : {port}")
-                write_logs(host, port[:-1], *["-", "-", "-", True])
+                    self.screenshot(index_server)
+            except Exception as e:
+                print(e)
+                QMessageBox.about(
+                    self, "Warning", f"no connected - {host} : {port}")
+                write_logs(host, port[:-1], *["undf", "undf", "undf", True])
                 self.client.server_reconnect(host, int(port), index_server)
 
     def connect_list(self):
@@ -159,14 +155,12 @@ class MyGUI(QWidget):
             except:
                 msg += " no connect... \n"
         QMessageBox.about(self, "allert", msg)
-    def screenshot(self,server_index):
+
+    def screenshot(self, server_index):
         if server_index is None:
             server_index = self.combo_box.currentIndex()
         [host, port] = self.combo_box.itemText(server_index).split(":")
-        self.client.get_image_from_server(server_index,host,port[:-1])
-
-        
-
+        self.client.get_image_from_server(server_index, host, port[:-1])
 
     def initUI(self):
         grid = QGridLayout()
@@ -186,11 +180,8 @@ class MyGUI(QWidget):
         self.button_hash = QPushButton("Get_screenshot")
         self.button_hash.clicked.connect(self.screenshot)
 
-
         self.button_connect_list = QPushButton("Connect list")
         self.button_connect_list.clicked.connect(self.connect_list)
-
-
 
         grid.addWidget(self.host_line_edit, 0, 1)
         grid.addWidget(self.port_line_edit, 1, 1)
@@ -200,7 +191,6 @@ class MyGUI(QWidget):
         grid.addWidget(self.button_hash, 2, 2)
         grid.addWidget(self.host_label, 0, 0)
         grid.addWidget(self.port_label, 1, 0)
- 
 
         self.setLayout(grid)
 

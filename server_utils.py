@@ -1,12 +1,6 @@
 import hashlib
 import subprocess
 
-def get_hash_from_file(path_file):
-    h= hashlib.sha256()
-    with open(path_file,'r') as f:
-        text = f.read()
-    h.update(text.encode())
-    return h.hexdigest()
 
 def get_example_program():
     data  = subprocess.getoutput('zgrep " installed " /var/log/dpkg.log* ')
@@ -28,7 +22,7 @@ def get_check(text,f_commands):
     return "True"            
 
 def get_usb_devices():
-    result = subprocess.getoutput('usbrip events history -q >> uh.txt')
+    result = subprocess.getoutput('usbrip events history -q > uh.txt')
     with open("uh.txt", 'r') as f:
         data = f.read()
     return data.encode()
